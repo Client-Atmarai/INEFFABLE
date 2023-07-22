@@ -1,0 +1,237 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+   <!-- <link rel="stylesheet" href="/static/css/style.css">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #aa{
+            text-align: center;
+            font-size: 25px;
+        }
+        .bb{
+            text-align: center;
+            color: red;
+        }
+        #cc{
+            text-align: center;
+            color: rgb(38, 179, 22);
+            margin: 0px;
+            font-size: 20px;
+        }
+        #dd{
+            text-align: center;
+            color: rgb(38, 179, 22);
+            margin: 0px;
+        }
+        .ee{
+            text-align: center;
+            color: hsl(0, 46%, 31%);
+        }
+        .ff{
+            text-align: center;
+            color: black;
+        }
+        a{
+            color: blue;
+        }
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+       
+    </style>
+    <title>Enquiry</title>  
+</head>
+<body>
+    
+    <div >
+        <div>
+            <img style="height: 80px; width: 200px;" src="../static/img/logo.png" alt="" srcset="">
+           
+        </div>
+        <h1 id="aa"><b><u>INEFFABLE GROUP OF INSTITUTION</u></b></h1>
+        <div>
+            <p class="bb">An institute registered under Trust act:Reg No.26/23</p>
+            <p class="bb">An ISO certified organisation</p>
+        </div>
+        <br>
+        <div style="border: 1px solid ;">
+            <h1 id="cc"><b>MARKSHEET</b></h1>
+            {% for d in re  %}
+            <label for="" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Roll NO :{{d.rollno}}</label>
+            <br>
+            <label for="">Student's Name :{{d.name}} </label>
+            <br>
+            {% comment %} <label for="">Roll number :{{d.rollno}}  </label> {% endcomment %}
+            <br>
+            
+            
+            <label for="">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp Student Photo <img src="{{d.image.path}}" height="100px" width="100px" alt="tt"/>
+                
+            </label>
+            <br>
+            <label for="">DOB :{{d.dob}}</label>
+            <br>
+            
+            <label for="">Center code :{{d.centre_code}}</label>
+            <br>
+             {% comment %} <label for="">Duration :{{d.duration}}</label>
+            <br> {% endcomment %}
+            
+{% comment %}             
+            <label for="">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspExamination Held on : {{d.examheldon}}</label> {% endcomment %}
+
+        </div>
+        <div style="border: 1px solid black;">
+            <h1 id="dd"><b>SUBJECTS</b></h1>
+            <br>
+            <table class="center" style="width: 80%;height: auto;">
+                <tr>
+                    <th>SR</th>
+                    <th>Subjects</th>
+                    <th>Total Marks</th>
+                    <th>Obtained Marks</th>
+                    <th>Remarks</th>
+                </tr>
+                <tr>
+                    <td>S1:-</td>
+                    <td>English</td>
+                    <td>100</td>
+                    <td>{{d.sub1}}</td>
+                    <td>{{d.remark}}</td>
+                </tr>
+                <tr>
+                    <td>S2:-</td>
+                    <td>Math</td>
+                    <td>100</td>
+                    <td>{{d.sub2}}</td>
+                    <td>{{d.remark}}</td>
+                </tr>
+                <tr>
+                    <td>S3:-</td>
+                    <td>Hindi</td>
+                    <td>100</td>
+                    <td>{{d.sub3}}</td>
+                    <td>{{d.remark}}</td>
+                </tr>
+                <tr>
+                    <td>S4:-</td>
+                    <td>Science</td>
+                    <td>100</td>
+                    <td>{{d.sub4}}</td>
+                    <td>{{d.remark}}</td>
+                </tr>
+                <tr>
+                    <td>S5:-</td>
+                    <td>Social studies</td>
+                    <td>100</td>
+                    <td>{{d.sub5}}</td>
+                    <td>{{d.remark}}</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div style="border: 1px solid black;">
+            <table class="center" style="width: 80%;">
+                <tr>
+                    <th>Exam</th>
+                    <th>Pass Mark</th>
+                    <th>Obtained Mark</th>
+                    <th>Total Mark</th>
+                </tr>
+                <tr>
+                    <th>WRITTEN</th>
+                    <td>35</td>
+                    <td>{{d.wm}}</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <th>PRACTICAL</th>
+                    <td>35</td>
+                    <td>{{d.pm}}</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <th>ASSIGNMENT/PROJECT</th>
+                    <td>35</td>
+                    <td>{{d.am}}</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <th>VIVA</th>
+                    <td>35</td>
+                    <td>{{d.vm}}</td>
+                    <td>100</td>
+                </tr>
+            </table>
+        </div>
+            <br>
+        <div>
+            <table align="right"  style="width: 25%;">
+                <tr>
+                    <th>PERCENTAGE</th>
+                    <td>{{d.percnt}}%</td>
+                </tr>
+                <tr>
+                    <th>GRADE</th>
+                    <td>{{d.grade}}</td>
+                </tr>
+                <tr>
+                    <th>SESSION</th>
+                    <td>{{d.session}}</td>
+                </tr>
+                <tr>
+                    <th>CENTER CODE</th>
+                    <td>{{d.centre_code}}</td>
+                </tr>
+                
+            </table>
+            {% endfor %}
+        </div>
+        <br>
+        <br>
+        <br><br><br><br>
+        <div>
+            <h5><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp CENTER DIRECTOR</b></h5>
+        </div>
+        
+        <br>
+        <div>
+            <p class="ee">|Above 75%- A+ Grade| |Below 74.9% to 60%- A Grade| |59.9% to 50%- B+ Grade| |Below 49.9% to 35%- B Grade|</p>
+            <p class="ee">|Below 35% - F Grade| |Absence - AB|</p>
+        </div>
+        <div >
+            <p class="ff"><b>Registered Office Laxmanpur, P.O-Surahi, Dist-Ballia, State-Uttar Pradesh, Pincode-277504</b></p>
+            <p class="ff"><b>Helpline No.+91 7897993672 / website: <a href="http://www.ineffableedu.in">www.ineffableedu.in</a></b></p>
+            <p class="ff"><b>e-mail: ineffableedu@gmail.com</b></p>
+        </div>
+
+    </div>   
+    
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+</body>
+</html>

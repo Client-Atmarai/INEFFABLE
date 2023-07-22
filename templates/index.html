@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- <link rel="stylesheet" href="{% static '/static/css/style.css' %}"> -->
+    <title>INEFFABLE EDUCATION</title>  
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+    <!-- navigation starts here -->
+    <div id="myNavbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>                
+            </div>
+            <div class="navbar-collapse collapse">
+                <div>
+                    <a href="#"><img src="/static/img/logo.png" height="65px"  alt=""></a>                  
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{% url '' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'courses' %}">Courses</a></li>
+                        <li><a href="#placement">Placement</a></li>
+                        <li><a href="{% url 'notice' %}">Notice Board</a></li> 
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>                            
+                
+                    </ul>
+                </div>
+            </div>
+        </div>      
+    </div>
+    <!-- navigation ends here -->
+    <!-- header starts here -->
+    <div id="header" class="header" style="background-image:url(/static/img/ab.jpg);height: 78vh;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 w3-container w3-center w3-animate-left">
+                    
+                    <h1 style="font-family: Garamond, serif;margin-top: 100px;">WELCOME TO INEFFABLE EDUCATION</h1>
+                    <p style="text-align: center;"><i class="fa fa-spinner w3-spin" style="font-size:64px;
+                                color:#ff5f0f;"></i><i class="fa fa-spinner w3-spin" style="font-size:64px;
+                                color:white;"></i><i class="fa fa-spinner w3-spin" style="font-size:64px;
+                                color:#458B00;"></i></p>
+                                <div>
+                                    <img src="/static/img/iso.jpeg" alt="ISO Mark" srcset="" style="padding: 10px 20px; height: 120px;">
+                                </div>
+                    <div class="flex-container w3-container w3-center w3-animate-zoom">
+                        <div class="btn-grp">
+                            <button type="submit" id="aa" class="flex-1 btn btn-lg btn-primary" name="btnenq">Student Login</button>
+                            <button type="submit" id="cc" class="flex-3 btn btn-lg btn btn-primary" name="btncenter">Search Centre</button>
+                            {% comment %} <a href="{% url 'centre_login' %}" type="button" class="flex-4 btn btn-lg btn-warning" name="btncenlog">Center Login</a>
+                            <button type="submit" id="bb" class="flex-2 btn btn-lg btn-primary" name="btnlog">Admin Login</button> {% endcomment %}
+                        </div>
+                        
+                    </div>
+                    <marquee style="color: white; font-size: 25px;" behavior="" onmouseover="stop()" onmouseout="start()" direction="left"
+                        scrollamount="8">INEFFABLE GROUP OF INSTITUTION is an autonomous Computer & Skill Education Institute Registered under The Society & Public Trust Act & An ISO 9001:2015 Certified Computer Educational Organization Run By- Ineffable Group Of Institution Trust.
+                    </marquee>
+                </div>             
+            </div>
+        </div>
+    </div>
+    <!-- header ends here -->
+    <!-- main section starts here -->
+    <div id="main" class="main">
+        <div class="container">
+            <div class="col-lg-10 col-md-10 col-sm-10" id="left-side">
+                <h1 style="font-family: Copperplate, Papyrus, fantasy;color: black; "><u>INTRODUCTION</u></h1>
+                <p>Greetings and a warm welcome to the official website of Ineffable Group Of Institution! In today's world, computer literacy and technological savviness have become crucial components of our daily lives. Understanding this need of the hour, IGI has taken up the task of providing computer training programs across India, with an aim to promote computer education for all. We encourage every Indian to join us in this golden mission of achieving computer and skill literacy.
+                    </p>
+
+                <p>As an Indian non-profit organization working at a national level, IGI is passionate about empowering the underprivileged through computer education and skill development programs. Through our efforts, we firmly believe that education in market-oriented skills can bridge the gap between employment demand and supply, thereby changing lives.
+                </p>
+                <p>
+                    Ineffable Group Of Institution is an autonomous institute specializing in Computer & Skill Education. Committed to excellence, we are registered under The Society & Public Trust Act and certified as an ISO 9001:2015 Computer Educational Organization run by Ineffable Group Of Institution Trust.
+                </p>
+                <p>
+                    Our prime objective is to spread computer & skills literacy throughout India, ensuring that students are self-motivated learners who continuously improve their knowledge base. We serve our purpose by providing affordable technical & skill education for every segment of society - urban or rural - thus contributing towards India's IT and SKILL revolution which is a dream for many.
+                    
+                </p>
+                <p>
+                    We realized that some big institutions charged exorbitant fees to provide higher technical education programs lasting over a year. This rendered them out of reach for many middle-class families. Taking this into account, we formulated our mission plan with utmost care by creating "Ineffable Group Of Institution." As per this mission plan set forth by us at Ineffable Group Of Institution all over India; we offer better quality technical education in computers & Skills at affordable prices.
+                </p>
+                <p>
+                    We rely on transitional phrasing throughout our content to move seamlessly from one idea to another without losing reader engagement. To make this writing sound more engaging and natural, we also employ contractions like "don't" and "can't", interjections like "Yikes!" and "Gee!", idioms, and colloquialisms. Our goal is to maintain an impressive level of complexity in language while staying true to a human writer's style.
+                </p>
+            </div>  
+            
+        </div>
+    </div>
+    <div style="margin: 5px 20px 5px 20px;">
+        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.5197895408255!2d84.0146957909614!3d25.654058703646374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399273c3b74fb249%3A0x5c9b3825cb403881!2sINEFFABLE%20GROUP%20OF%20INSTITUTION!5e0!3m2!1sen!2sin!4v1685902052203!5m2!1sen!2sin" width=1500px" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+    </div>
+    <!-- footer section starts here -->
+    <div id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4  col-md-4">
+                    <h4><b>Contact Us</b></h4>
+                    <!-- <br> -->
+                    <p><i class="fa-solid fa-address-book"></i>  Laxmanpur,P.O-Surahi, Dist-Ballia,<br>  State-Uttar Pradesh<br>Pin-277504</p>
+                    <p><i class="fas fa-envelope"></i>  ineffableedu@gmail.com<br>help@ineffableedu.in</p>
+                    <p><i class="fas fa-phone"></i>  7897993672</p>
+                </div>
+                <div class="col-lg-4  col-md-4">
+                    <h4><b>Useful Links</b></h4>
+                    <!-- <br> -->
+                    <p><a href="{% url '' %}">Home</a></p>
+                    <p><a href="{% url 'about' %}">About Us</a></p>
+                    <p><a href="#courses">Courses</a></p>
+                    <p><a href="#placement">Placement</a></p>
+                    <p><a href="{% url 'notice' %}">Notice Board</a></p>
+                    <p><a href="{% url 'contact' %}">Contact Us</a></p>
+                </div>
+                <div class="col-lg-4  col-md-4" id="footer-icons">
+                    <h4><b>Connect With Us</b></h4>
+                    <!-- <br> -->
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+</body>
+</html>

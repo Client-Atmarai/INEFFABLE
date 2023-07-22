@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>registration</title>
+  </head>
+  <body style="background-color:black;color: white;">
+    <h1 style="text-align: center;color:grey">Registration Form  </h1>
+
+    <p style="color:white">{{msg}}</p>
+    <form class="row g-3 needs-validation" method="POST" action="{% url 'stu_form' %}" 
+    enctype="multipart/form-data" >
+       {% csrf_token %}
+        <div class="col-md-3">
+          <label for="validationCustom01" class="form-label">Name</label>
+          <input type="text" class="form-control" name="username" id="validationCustom01"  >
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom02" class="form-label">Roll Number</label>
+          <input type="number" placeholder="Remember you Number for update" class="form-control" name="urollno" id="validationCustom02"  >
+        </div>
+        
+        <div class="col-md-3">
+            <label for="validationCustom02" class="form-label">Photo</label>
+            <input type="file" class="form-control" name="uphoto" id="validationCustom02" >
+          </div>
+        
+        <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">Date Of birth</label>
+            <input type="text" class="form-control" name="udob" id="validationCustom04"  >
+        </div>
+        <div class="col-md-6">
+            <label for="validationCustom04" class="form-label">Course Name</label>
+            <select class="form-select" name="ucoursename" id="validationCustom04" >
+              <option selected disabled value="">Select</option>
+              <option>STC Software course-Certificate in Computer English Typing dur-1/2/3/6month</option>
+              <option>STC Software course-Certificate in Computer Hindi Typing dur-1/2/3/6 month</option>
+              <option>STC Software course-Certificate in Computer Punjabi Typing dur-1/2/3/6 month</option>
+              <option>STC Software course-Certificate in Computer Marathi Typing dur-1/2/3/6 month</option>
+              <option>STC Software course-Certificate in Computer Bengali Typing dur-1/2/3/6 month</option>
+              <option>STC Software course-Certificate in Computer Sanskrit Typing dur-1/2/3/6 month</option>
+              <option>STC Software course-Certificate in Computer Kannada Typing dur-1/2/3/6 month</option>
+              <option>STC Software course-Certificate in Computer Telugu Typing dur-1/2/3/6 month</option>
+              <option>STC Software course-Certificate in Computer Tamil Typing dur-1/2/3/6 month</option>
+              <option>STC Software course-Certificate in Computer Oriya Typing dur-1/2/3/6 month</option>
+              <option>STC Software course-Certificate in Computer Malayalam Typing dur-1/2/3/6 month</option>
+              <option>STC Software course-Certificate in Internet Application- dur 1month or 45days</option>
+              <option>STC Software course-Certificate in Web Designing Dur- 2/3 month</option>
+              <option>STC Software course-Certificate in Basic Designing Dur- 2/3 month</option>
+              <option>STC Software course-Certificate in CompuFunda for kids  Dur- 1/3 month</option>
+              <option>STC Software course-Certificate in DTP(Desktop Publishing) Dur- 1/2/3/6 month</option>
+              <option>STC Software course-Certificate in CAD(Computer Aided Designing/drafting) Dur- 1/2/3/6 month</option>
+              <option>STC Software course-Certificate in C or Java Programming Dur- 1/2/3/6 month</option>
+              <option>STC Software course-Certificate in Tally Dur- 1/2/3 month or 45 Days</option>
+              <option>STC Software course-Certificate in Basic Computer Programming Dur- 1/2/3 month</option>
+              <option>Hardtware - Diploma in Computer Software and Hardware(DCSH) </option>
+              <option>Hardtware - Advance Diploma in Computer  Hardware(ADCH) </option>
+              <option>Hardtware - Diploma in Computer Hardware (DCH) </option>
+              <option>Hardtware - Diploma in Computer Networking (DCN) </option>
+              <option>Hardtware - Certificate Computer Hardware & Peripherals(CCHP)  </option>
+              <option>Hardtware - Certificate in PC Assembling & maintainance (CPCAM) </option>
+              <option>STC hardware course - Certificate in Computer Software and Hardware Skills(1 month or 45 days) </option>
+              <option>STC hardware course - Certificate in CPU repairing(1 month or 45 days)  </option>
+              <option>STC hardware course - Certificate in Monitor repairing(1 month or 45 days)</option>
+              <option>STC hardware course - Certificate in Printer repairing (1 month or 45 days) </option>
+              <option>STC hardware course - Certificate in Software Installation (1 month or 45 days) </option>
+              <option>STC hardware course - Certificate in PC assembling  (1 month or 45 days) </option>
+              <option>STC hardware course - Certificate in Mobile repairing (1 month or 45 days) </option>
+              <option>STC hardware course - Certificate in Multimedia (1 month or 45 days) </option>
+              <option>Software - PG Diploma in Computer Application (PGDCA)</option>
+              <option>Software - Diploma in Computer Instructor Training (DCIT)</option>
+              <option>Software - Advance Diploma in Computer Programming(ADCP) </option>
+              <option>Software -Honours Diploma in Computer Application (HDCA)</option>
+              <option>Software - Diploma in Computer office Management & Publishing(DCOMP)</option>
+              <option>Software -Advance  Diploma in Computer Application(ADCA)</option>
+              <option>Software -Advance Diploma in Computer Financial Accounting (ADCFA)</option>
+              <option>Software -Advance Certificate I computer Application(ACCA)</option>
+              <option>Software -Diploma in Computer Financial Accounting(DCFA)</option>
+              <option>Software -Diploma in DesjTop Publishing (DDTP)</option>
+              <option>Software -Diploma in Web Designing (DWD)</option>
+              <option>Software -Diploma in Computer Application</option>
+              <option>Software -Certificate in Computer Application(CCA)</option>
+              <option>Software -Certificate in Basic Computer (CBC) </option>
+              <option>Software -Certificate in Computer Financial Accounting(CCFA)</option>
+                 </select>
+          </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">Session</label>
+          <select class="form-select" name="usession" id="validationCustom04" >
+            <option selected disabled value="">Select</option>
+            <option>2018-2019</option>
+            <option>2019-2020</option>
+            <option>2020-2021</option>
+            <option>2021-2022</option>
+            <option>2022-2023</option>
+          </select>
+        </div>
+        
+        <div class="col-md-2">
+            <label for="validationCustom02" class="form-label">Percentage</label>
+            <input type="number" class="form-control" name="upercentage" value="00" id="validationCustom02"  >
+          </div>
+          <div class="col-md-2">
+                <label for="validationCustom04" class="form-label">Grade</label>
+            <select class="form-select" name="ugrade" id="validationCustom04" >
+              <option selected disabled value="">Select</option>
+              <option>A+</option>
+              <option>A</option>
+              <option>B+</option>
+              <option>B</option>
+              <option>C+</option>
+              <option>C</option>
+            </select>
+          </div>
+
+        <div class="col-md-3">
+            <label for="validationCustom02" class="form-label">Centre Name</label>
+            <input type="text" name="ucentrecode"  value="{{user.username}}"
+            class="form-control" id="validationCustom02"  disabled>
+          </div>
+          
+        <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">Remark</label>
+            <select class="form-select" name="uremark" id="validationCustom04" >
+              <option selected disabled value="">Choose...</option>
+              <option>Pass</option>
+              <option>Fail</option>
+              <option>Absent</option>
+            </select>
+          </div>
+         
+          <div class="col-md-3">
+            <label for="validationCustom08" class="form-label">Sub-1</label>
+            <input type="number" class="form-control" name="usub1" placeholder="Enter marks"
+            value="00"  id="validationCustom08"  required>
+          </div>
+          
+          <div class="col-md-3">
+            <label for="validationCustom09" class="form-label">Sub-2</label>
+            <input type="number" class="form-control" name="usub2" placeholder="Enter marks" value="00" id="validationCustom09"  required>
+          </div>
+              
+          <div class="col-md-3">
+            <label for="validationCustom10" class="form-label">Sub-3</label>
+            <input type="number" class="form-control" name="usub3" placeholder="Enter marks" value="00" id="validationCustom10"  required>
+          </div>
+          
+          <div class="col-md-3">
+            <label for="validationCustom11" class="form-label">Sub-4</label>
+            <input type="number" class="form-control" name="usub4" placeholder="Enter marks" value="00" id="validationCustom11"  required>
+          </div>
+          
+          <div class="col-md-3">
+            <label for="validationCustom12" class="form-label">Sub-5</label>
+            <input type="number" class="form-control" name="usub5" placeholder="Enter marks" value="00" id="validationCustom10"  required>
+          </div>
+          
+          <div class="col-md-3">
+            <label for="validationCustom13" class="form-label">Written Marks</label>
+            <input type="number" class="form-control" name="uwm" placeholder="Enter marks" value="00" id="validationCustom10"  required>
+          </div>
+          
+          <div class="col-md-3">
+            <label for="validationCustom13" class="form-label">Practical Marks</label>
+            <input type="number" class="form-control" name="upm" placeholder="Enter marks" value="00" id="validationCustom10"  required>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom13" class="form-label">Assignment Marks</label>
+            <input type="number" class="form-control" name="uam" placeholder="Enter marks" value="00" id="validationCustom10"  required>
+          </div>
+          
+          <div class="col-md-3">
+            <label for="validationCustom13" class="form-label">Viva Marks</label>
+            <input type="number" class="form-control"name="uvm" placeholder="Enter marks" value="00" id="validationCustom10"  required>
+          </div>
+        <div class="col-12">
+          <button class="btn btn-primary" name="btn_insert" type="submit">Submit form</button>
+          <button class="btn btn-light" name="btn_update"  type="submit">Update </button>
+        </div>
+       
+      </form>
+      <br>
+      <!-- <a href="{% url 'logout_student' %}" type="type" class="btn btn-danger btn-sm"  >Logout</a> -->
+      <a href="{% url 'centre_logout' %}" type="type" class="btn btn-danger btn-sm"  >Logout</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html> 

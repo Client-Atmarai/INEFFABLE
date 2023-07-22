@@ -1,0 +1,236 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>INEFFABLE EDUCATION</title>
+</head>
+<body>
+  <form method="post">
+    {% csrf_token %}
+    <!-- navigation starts here -->
+    <div id="myNavbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>                
+            </div>
+            <div class="navbar-collapse collapse">
+                <div>
+                  <a href="#"><img src="/static/img/logo.png" height="65px"  alt=""></a>                  
+                  <ul class="nav navbar-nav navbar-right">
+                      <li><a href="{% url '' %}">Home</a></li>
+                      <li><a href="{% url 'about' %}">About Us</a></li>
+                      <li><a href="{% url 'courses' %}">Courses</a></li>
+                      <li><a href="#placement">Placement</a></li>
+                      <li><a href="{% url 'notice' %}">Notice Board</a></li>   
+                      <li><a href="{% url 'contact' %}">Contact Us</a></li>                                      
+                  </ul>
+                </div>
+            </div>
+        </div>      
+    </div>
+    <!-- navigation ends here -->
+    <!-- header starts here -->
+    <div id="header" class="header" style="background-image:url(/static/img/ab.jpg);height: 78vh;">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 col-md-12 w3-container w3-center w3-animate-left">
+                  
+                  <h1 style="font-family: Garamond, serif;margin-top: 100px;">WELCOME TO INEFFABLE EDUCATION</h1>
+                  <p style="text-align: center;"><i class="fa fa-spinner w3-spin" style="font-size:64px;
+                              color:#ff5f0f;"></i><i class="fa fa-spinner w3-spin" style="font-size:64px;
+                              color:white;"></i><i class="fa fa-spinner w3-spin" style="font-size:64px;
+                              color:#458B00;"></i></p>
+                              <div>
+                                  <img src="/static/img/iso.jpeg" alt="ISO Mark" srcset="" style="padding: 10px 20px; height: 120px;">
+                              </div>
+                  <div class="flex-container w3-container w3-center w3-animate-zoom">
+                      {% comment %} <div class="btn-grp">
+                          <button type="submit" id="aa" class="flex-1 btn btn-lg btn-primary" name="btnenq">Student Login</button>
+                          <button type="submit" id="cc" class="flex-3 btn btn-lg btn btn-primary" name="btncenter">Search Centre</button>
+                          <button type="submit" id="dd" class="flex-4 btn btn-lg btn-warning" name="btncenlog">Center Login</button>
+                          <button type="submit" id="bb" class="flex-2 btn btn-lg btn-primary" name="btnlog">Admin Login</button>
+                      </div> {% endcomment %}
+                      <div class="btn-grp">
+                        <button type="submit" id="aa" class="flex-1 btn btn-lg btn-primary" name="btnenq">Student Login</button>
+                        <button type="submit" id="cc" class="flex-3 btn btn-lg btn btn-primary" 
+                        name="btncenter">Search Centre</button>
+                        <a href="{% url 'centre_login' %}" type="button" class="flex-4 btn btn-lg btn-warning"
+                         name="btncenlog">Center Login</a>
+                        <button type="submit" id="bb" class="flex-2 btn btn-lg btn-primary" name="btnlog">Admin Login</button>
+                    </div>
+                  </div>
+                    <marquee style="color: white; font-size: 25px;" behavior="" onmouseover="stop()" onmouseout="start()" direction="left"
+                        scrollamount="8">INEFFABLE GROUP OF INSTITUTION is an autonomous Computer & Skill Education Institute Registered under The Society & Public Trust Act & An ISO 9001:2008 Certified Computer Educational Organization Run By- Ineffable Group Of Institution Trust.
+                    </marquee>
+                </div>             
+            </div>
+        </div>
+    </div>
+    <!-- header ends here -->
+    <!-- main section starts here -->
+    <div id="main" class="main">
+        <div class="container">
+            <div class="col-lg-10 col-md-10 col-sm-10" id="left-side">
+                <h1 style="font-family: Copperplate, Papyrus, fantasy;"><u>NOTICE</u></h1>
+                <p>The Ineffable Group of Institutions has initiated a national program for IT and Vocational education called "IGI Skill Abhiyan." As part of this program, all students and affiliated centers have been notified. To ensure the proper functioning and  administration of their IT and Skill Educational/Training franchise, each newly opened or currently operating center must adhere to our  prescribed guidelines.
+                </p>
+                <p>                 
+                  Students  enrolling in  our Authorised center  should read this notice.
+                </p>
+<pre style="background-color: lightgray;">
+1.	Each pupil need to mechanically attend magnificence on the certain batch time.
+2.	Students should appreciate their instructors and chorus from arguing or finding fault.
+3.	To request a leave of absence, a scholar have to publish a written request to the center  director or head of the center  or report their request within the sign up stored by way of the related center  director or head.
+4.	Within 10 mins of the start in their respective  batch time, students must enter the school room or lab. If this time has surpassed, college students aren't accredited to enter.
+5.	To affirm the purpose in their tardiness, a   smartphone call will be placed to their dad and mom. 
+6.	As per the rules, students are not allowed to use their mobile phones during class hours. They can only use  them outside the classroom and must keep them on silent mode.
+7.	It is mandatory for students  to appear in the weekly/monthly tests as prescribed by the center director/head.
+8.	To maintain proper records, students must have separate notebooks for tests, rough work, and homework.The concerned course faculty will regularly check homework notebooks.
+9.	Practical and viva marks will be awarded based on a student's performance in weekly/monthly tests and regular notebook checks.
+10.	Students are required to seek permission from teachers/instructors before entering or leaving the classroom premises.
+11.	Our center ensures a peaceful  learning environment both inside and outside the classroom.
+12.	Our center head cannot be held responsible for any loss of personal belongings such as books, notebooks, or bags left on the premises by students.
+13.	Students are not permitted  to enter the "center" class/lab room with visitors, relatives, or friends.
+14.	Students are required to bring their bags, class work notebooks and ID-Cards.
+15.	The tuition fee must be paid before the 10th of every month or as prescribed by the center head. Failure to pay within the prescribed time may result in a late fee of 10 to 50 Rs., payable to the franchise center head.
+16.	Our recognized Educational/Training centers offer students the option to transfer to another IGI Center  with written permission from their center  head/director.
+17.	A fine of Rs. 10 will be imposed for any absences from the classroom, which will be included in the monthly tuition fee.
+18.	Please note that once paid, admission/registration/tuition fees are non-refundable in any circumstance.
+19.	In the event that a student wishes to withdraw from a certificate/diploma/other course, they must provide one month's prior written notice or application to their center  head/director and obtain an NOC for withdrawal. Failure to do so may result in disciplinary action being taken against them.
+20.	To confirm their Enrollment No. or Roll No., students must contact C.O-U.P directly by phone and speak with IGI director U.P.
+21.	The center  head has established a batch-wise procedure for both theory and lab classes, which all students are required to follow. Additionally, it is the responsibility of each student to obtain a receipt for all fees paid from the affiliated center -head. The issuance of certificates and diplomas is contingent upon several factors, including confirmation of registration with Ineffable Education, successful course completion, and obtaining a NOC from the center  director or head. The rules enforced by the center  director must also be followed by students in order to ensure academic success.
+22.	Ineffable Education offers job assistance exclusively to deserving candidates. As a non-formal education institution certified by the Government of India, Ineffable Group of Institution operates on a not-for-profit basis and provides skill advancement courses designed to combat unemployment issues. Basic certificate and diploma courses are available through their skill advancement training awareness programs.
+23.	Upon completion of these courses, students will receive an Ineffable Group of Institution titled diploma or certificate that is applicable for non-formal sector jobs. However, it's important to review all requirements, rules & regulations before applying for any jobs related to these certificates or diplomas.
+24.	The prescribed fee must be paid by students directly to their education franchise center  head. Ineffable Education charges only a one-time nominal registration/enrollment fee for certificates/diplomas issued through center heads. Admission/tuition/exam fees will be determined solely by concerned center heads based on infrastructure investment and facilities provided in IT and skill literacy centers as well as geographical conditions and literacy ratios in areas where they operate.
+25.	Any disputes regarding fees between center heads or students must be mutually resolved without holding Ineffable Education liable on this issue/dispute; they will only provide suggestions if needed.
+26.	Ineffable Group of Institution offers students the opportunity to obtain a prestigious diploma or certificate. These credentials are recognized in the N-F sector job market, but it is important to carefully review the requirements, rules, and guidelines for any desired positions before applying. 
+27.	Students are required to pay a one-time nominal registration/enrollment fee directly to their education franchise center head. Ineffable Education will not be involved in any disputes regarding admission, tuition, or exam fees; such issues will need to be resolved between the student and center head. 
+28.	It is necessary for a guardian signature on admission forms if the student is under 18 years old. 
+29.	Decisions made by Ineffable Education for students are final and binding. The institution reserves the right to change or revise policies without prior notice. 
+30.	English proficiency is necessary for I.T and skill training courses as teachers require this knowledge for effective teaching standards.
+31.	Students can verify center authorization on www.ineffableedu.in for validity purposes.
+32.	By accepting these regulations, students can enroll in any course offered by IGI; otherwise, admission will not be granted under any circumstances or excuses after enrollment.
+
+</pre>
+<p>
+  Notice of Understanding Cum Clearance- Issued To All Authorized Centers
+</p>
+<pre style="background-color:khaki;">
+•	It is essential to renew your Educational/Training Center certificate on or before the renewal date each year. Failure to do so will result in automatic cancellation of your center without notice, and another I.T and Skill Training center will be allotted in the same area.
+
+•	Ineffable Group of Institution has issued an authorization certificate for you to provide training at a specific center building/premises address. However, this authorization does not apply to any branches or franchises at different locations. For these additional locations, you must submit a new center application for separate authorization with an applicable fee.
+
+•	It is important to note that only the Head office has authority to issue Student/s certificates certified/issued under I.T. & Skill Educational/Training program and seal of Ineffable Group of Institution. The Center  Owner/Director is not authorized to design/print/issue any certificate in the name of IGI or Ineffable Group of institution or Ineffable Education or Ineffable I.T and Skill Training. The student/s training certificate will be received by the Center  Owner/Director at their provided Center  postal address.
+
+•	All courses offered by Ineffable Group of Institution are intended for self-employment purposes only. The validity and acceptance of training certificates for concerned jobs depend upon rules, regulations, policies, terms & conditions prescribed by the relevant department.
+
+•	It is imperative that the Scan Admission/Registration form be submitted before the prescribed dates as per session. Failure to do so will result in the Center  head having to pay a prescribed late fee, in addition to the registration fee, if imposed by HO. No excuses will be entertained.
+
+•	Please note that no Admission/Registration form without student signature, photo, required copies of certificates, Ph. No., Address will be accepted.
+
+•	Once registration forms have been submitted to Head Office-H.P., it then becomes the duty of affiliated Educational Center  head to add/update student’s Roll No. at website. Make sure you read FAQ in login panel.
+
+•	To run any scheme in your I.T and Skill center, permission from C.O- U.P is necessary. Center  Head will be fully responsible if he/she does not have any permission to run any scheme or courses in his/her Center  and Ineffable Education-IGI shall not be held liable for the same.
+
+•	It is up to the Center  head to prescribe course fees structure & send a copy of the same structure to head office.
+
+•	Under no circumstances should copyrighted material of IGI be misused by Center  heads.
+
+•	Center  Owner/Director must refrain from getting any registration/franchise/affiliation from any other institution or NGO or Company or Brand or Government or Society under the name of IGI or Ineffable Group of Institution or Ineffable Education or Ineffable I.T and Skill Training Education.
+
+•	Center  Owner/Director should not apply for any government schemes & Loans under the name of IGI or Ineffable Group of Institution or Ineffable Education or Ineffable I.T and Skill Training Education. It should also be noted that Center  Owner/Director director has no right whatsoever to use legal documents of IGI for any purpose whatsoever.
+
+•	If requested by any department for verification purposes, Center  Owner/Director can show/produce his/her Center  authorization certificate at their discretion. If however, any department demands for IGI legal Documents, then IGI will produce the same by post to concerned department, if a letter requesting such is sent by the concerned department to IGI head Office.
+
+•	The Head Office has given you the go-ahead to conduct training courses at your Center  premises under the I.T & Educational/Training Programs of Ineffable Group of Institution. It's important to note that Ineffable Group of Institution has not invested in your center/Institute setup, so all expenses, investments, and formalities relating to your Center  operation shall be borne and managed by you. This includes I.T and Skill systems, Center  furniture, Center  teacher appointment/salary/experience certificates, Center  building (rented/self-owned), building security Fire & Safety Tools, first aid kit etc., Educational/Training legal Software’s, Center  Audit Report, Center  ITR registration as proprietorship or Society or partnership, Center  Taxes (All types), NOC From Panchayat, Municipality, State Govt. any Education Department or whenever/wherever required in present or future.
+
+•	It's also important to note that all types of payments paid or to be paid to Ineffable Group of Institution shall not be refundable in any case whatsoever. Any types of fee will not be refundable or adjustable in any circumstances. If a student leaves the training course then his/her registration fee paid to head office will not be refundable & adjusted to the new student. All Fees related issues will be mutually settled between student & Center  owner with head office providing suggestions if requested.
+
+•	Furthermore, it should be noted that Ineffable Group of Institution shall not be held liable for any commitment or schemes or advertisement or tie-up with students universities govt corporate public & other organizations of the same nature which you run on a personal level in the Center .
+
+•	Lastly but most importantly if the Center Owner/Director is found involved in any criminal financial social or any other offence then the authorization of your center shall automatically come to an end without issuing any prior notice.
+
+•	The Center  Owner/Director is strictly prohibited from creating any social media pages using the names IGI, Ineffable Group of Institution, Ineffable Education, Ineffable I.T and Skill Education or Ineffable India. Additionally, they are not allowed to create any websites with these names. Failure to comply will result in the immediate cancellation of their franchise and legal action will be taken against them. 
+•	Copying data, text, content, photos or business plans from the Ineffable Group of Institution website/s for use on their Center  website/s or social platform website/s is also strictly prohibited. INEFFABLE GROUP OF INSTITUTION holds the right to cancel a franchise without prior notice and take legal action against offenders based on Trademark Act & Copyright Act.
+•	The Center  Owner/Director is responsible for any misbehaviour or offence committed by students or individuals within their Center  premises and cannot hold head office accountable.
+•	It is mandatory that Center  Owners submit teachers' documents to head office upon joining and provide updates for new teacher joining via email.
+•	Head office reserves all rights to use photos of the Center 's premises and students on its website/s and social media platforms. They are also authorized to send SMSs and emails related to training, exam certifications & other related activities/operations.
+•	Center  Owner/Director must maintain records of student attendance, assessment practicals, study materials exam documents marks detail form etc., which may be demanded at any time by Head Office for verification purposes. Failure to submit required documents will result in cancellation of certificates issued by Head Office based on exam marks detail form submitted by Center  Owner who will be responsible for this consequence.
+•	When it comes to determining the distance between existing and new centers, there are a few factors to consider. For village areas, the distance will be 5 kilometers, while for city areas, it will be 3 kilometers. However, please note that the head office reserves the right to adjust these distances based on admission response from existing centers.
+
+•	As for course offerings, please be aware that new courses may be added or existing ones may be removed/discontinued based on market trends or changes in job policies, rules and regulations. Any updates of this nature will be posted on our official website and login panel. It is recommended that you check both at least once a week to stay informed; we will not provide email or phone call notifications in the future.
+
+•	Please note that Ineffable Education may use photos of your center, students or center owner for official records, advertising purposes or student roll number/certificates/center status verification purposes on our website and social media accounts. Please also note that training centers cannot claim copyright or trademark over these photos at any point during their authorization period (nor after expiry/closure/termination/cancellation).
+
+<p>
+  As a responsible student or center owner, it is imperative that you regularly check the notice board page, other web pages, and login panels at least once every week. It is important to note that no excuses will be entertained in the future. All relevant information is readily available on the official website (www.ineffableedu.in) and login panel, which are updated regularly.
+</p>
+</pre>
+<pre style="background-color: lightgray; color: red; font-size: 17.5px;">
+    In case of any information regarding above mentioned notice Please call us at 7897993672
+                                          or
+                            Email @- ineffableedu@gmail.com                  
+</pre>
+            </div>  
+        </div>
+    </div>
+    {% comment %} <div style="margin: 5px 20px 5px 20px;">
+        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.5197895408255!2d84.0146957909614!3d25.654058703646374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399273c3b74fb249%3A0x5c9b3825cb403881!2sINEFFABLE%20GROUP%20OF%20INSTITUTION!5e0!3m2!1sen!2sin!4v1685902052203!5m2!1sen!2sin" width="1150" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+    </div> {% endcomment %}
+    <!-- footer section starts here -->
+    <div id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4  col-md-4">
+                    <h4><b>Contact Us</b></h4>
+                    <!-- <br> -->
+                    <p><i class="fa-solid fa-address-book"></i>  Laxmanpur,P.O-Surahi, Dist-Ballia,<br>  State-Uttar Pradesh<br>Pin-277504</p>
+                    <p><i class="fas fa-envelope"></i>  ineffableedu@gmail.com<br>help@ineffableedu.in</p>
+                    <p><i class="fas fa-phone"></i>  7897993672</p>
+                </div>
+                <div class="col-lg-4  col-md-4">
+                    <h4><b>Useful Links</b></h4>
+                    <!-- <br> -->
+                    <p><a href="{% url '' %}">Home</a></p>
+                    <p><a href="{% url 'about' %}">About Us</a></p>
+                    <p><a href="#courses">Courses</a></p>
+                    <p><a href="#placement">Placement</a></p>
+                    <p><a href="{% url 'notice' %}">Notice Board</a></p>
+                    <p><a href="{% url 'contact' %}">Contact Us</a></p>
+                </div>
+                <div class="col-lg-4  col-md-4" id="footer-icons">
+                    <h4><b>Connect With Us</b></h4>
+                    <!-- <br> -->
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+  </form>
+</body>
+</html>

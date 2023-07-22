@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Student Status</title>
+   
+</head>
+<body style="background-image: url(/static/img/img4.jpg);">
+        <table border="2px solid black" style="width:100%" class="table table-striped-columns"> 
+            <tr>
+                <th>Id</th>
+                <th>RollNO</th>
+                <th>Student Name</th>
+                <th>Center Name</th>
+                <th>Status</th>
+            </tr>
+            
+            {% for t in tt %}
+            <form action="{% url 'admin_check_status' %}" method="POST">
+                {% csrf_token %}
+            <tr>
+                <td>{{t.sid}}</td>
+                <td>{{t.rollno}}</td>
+                <td>{{t.name}}</td>
+                <td>{{t.centre_code}}</td>
+                {% comment %} <td><a type="button"  href="#" class="btn btn-info" value="1">Approval</a>
+                <a type="button" href="" class="btn btn-warning" value="0">Decline</a></td> {% endcomment %}
+            <td><input type="submit" class="btn btn-warning" value="Accept" name="status">
+                <input type="submit" class="btn btn-info" value="Reject" name="status">
+                
+                <input type="hidden" name="centre_code" value={{ t.centre_code }}>
+                <input type="hidden"  name="rollno" value={{  t.rollno }}></td>
+            </tr>
+        
+        </form>    {% endfor %}
+        
+        </table>
+</body>
+</html>

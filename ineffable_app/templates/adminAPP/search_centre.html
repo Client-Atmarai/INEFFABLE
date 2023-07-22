@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>INEFFABLE EDUCATION</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+    <!-- navigation starts here -->
+    <div id="myNavbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>                
+            </div>
+            <div class="navbar-collapse collapse">
+                <div>
+                    <a href="#"><img src="/static/img/logo.png" height="65px"  alt=""></a>                  
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{% url '' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'courses' %}">Courses</a></li>
+                        <li><a href="#placement">Placement</a></li>
+                        <li><a href="{% url 'notice' %}">Notice Board</a></li>   
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>                                      
+                    </ul>
+                </div>
+            </div>
+        </div>    
+    </div>
+  </form>
+  <br><br/></br>
+  <a href="{% url 'search' %}" style="color:rgb(17, 16, 16)"><h1 style="text-align: center;font-size: 20px;">Centre Search</h1></a>
+  <div class="container mx-auto py-12" >
+    <div class="table-container" style="width: 100%;border: 1px solid;">
+      <table class="min-w-full bg-black" style="background-color: black;color:whitesmoke;
+      border:1px solid white;width:100%;height:300px">
+        <thead >
+          <tr style="background-color: grey;color:white;">
+            <th class="py-4 px-6 bg-gray-300 font-bold uppercase text-sm text-gray-600 border-b border-gray-400">
+              Username
+            </th>
+            <th class="py-4 px-6 bg-gray-300 font-bold uppercase text-sm text-gray-600 border-b border-gray-400">
+              Email
+            </th>
+            <th class="py-4 px-6 bg-gray-300 font-bold uppercase text-sm text-gray-600 border-b border-gray-400">
+              Name
+            </th>
+            
+          </tr>
+        </thead>
+        <tbody>
+            {% for u in user %}
+           <tr>
+            <td class="py-4 px-6 border-b border-gray-800" style="text-align: center;">
+    {{u.username}}          
+            </td>
+            <td class="py-4 px-6 border-b border-gray-800" style="text-align: center;">
+{{u.email}}
+            </td>
+            <td class="py-4 px-6 border-b border-gray-800" style="text-align: center;">
+              {{u.first_name}}{{u.last_name}}
+            </td>
+        </tr>
+        {% endfor %} 
+
+        <!-- <tr>
+            <td class="py-4 px-6 border-b border-gray-400">
+              Jane Smith
+            </td>
+            <td class="py-4 px-6 border-b border-gray-400">
+              jane@example.com
+            </td>
+            <td class="py-4 px-6 border-b border-gray-400">
+              User
+            </td>
+          </tr>
+          -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+<br>
+
+  <!-- navigation ends here -->
+    
+    <!-- header starts here -->
+        <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+
+</body>
+</html>

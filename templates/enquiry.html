@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Enquiry</title>  
+</head>
+<body style="background: rgb(34,193,195);">   
+        <div class="container" style="background-color: #043959;color: white;margin-top: 140px;">
+            <div id="myNavbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>                
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <div>
+                            <a href="#"><img src="/static/img/logo.png" height="65px"  alt=""></a>                  
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="{% url '' %}">Home</a></li>
+                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                <li><a href="{% url 'courses' %}">Courses</a></li>
+                                <li><a href="#placement">Placement</a></li>
+                                <li><a href="{% url 'notice' %}">Notice Board</a></li> 
+                                <li><a href="{% url 'contact' %}">Contact Us</a></li>                            
+                        
+                            </ul>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+            <!-- navigation ends here -->
+            
+            <div class="col-lg-3 col-md-3 col-sm-3" id="left-side">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6" id="left-side">                
+                <br>
+                <h2 style="text-align: center;"><b>Enquiry</b></h2>
+                <br>
+                <form class="form" method="post" action="{% url 'enq_form' %}">
+                    {% csrf_token %}
+                    <div class="form-group" style="font-size: 25px;">
+                        <label for="">RollNO.</label>
+                        <input type="number" class="form-control" name='txtrn' id="" placeholder="Enter Your RollNo.">
+                    </div>                    
+                    <br>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-lg" name="btnsearch">Search</button>
+                    </div>
+                  </form>
+                  <br><br><br>
+            </div> 
+            <br/>
+            <br/>
+            <table class="table table-bordered" style="border:3; width:100%; height: 50%; background-color:black;">
+                <tr>
+                    <th>First Name</th>
+                    <th>RollNo</th>
+                    <th>Photo</th>
+                    <th>Result</th>
+                </tr>
+                {% for d in data %}
+                <tr>
+                    <td>{{d.name}}</td>
+                    <td>{{d.rollno}}</td>
+                    <td><img src="{{d.image.url}}" height="50px" width="50px" /></td>
+                    {% if status == "Accept" %}
+                    <td><a href="{% url 'pdf_creation' c_id=d.rollno %}" target="_blank">Generate PDf</a>
+                        {% endif %}
+                    </td>
+                    
+                    
+                </tr>
+                {% endfor %}
+            </table>             
+        </div>
+    </div>   
+
+
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+</body>
+</html>
